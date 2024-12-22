@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Loan Email</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .logo {
+      grid-column: 1 / span 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #0033a0;
+      color: #fff;
+      padding: 10px 20px;
+      max-width: fit-content;
+      border-radius: 0px 20px 20px 20px;
+    }
+    .logo h1 {
+      margin-left: 10px;
+    }
+    .top-info, .greeting {
+      padding: 20px;
+      background-color: #ecfcfc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 20px 20px 20px 0px;
+    }
+    .top-info {
+      grid-column: 1 / 2;
+    }
+    .greeting {
+      grid-column: 2 / 3;
+    }
+    .requirements {
+      grid-column: 2 / 3;
+      display: flex;
+      justify-content: space-between;
+      background-color: #eef6ff;
+      padding: 20px;
+      border-radius: 20px 20px 20px 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      gap: 18px;
+      transform: translateX(-1rem);
+      
+    }
+    .requirement-item {
+      flex: 1;
+      text-align: center;
+    }
+    .recommendations {
+      grid-column: 1 / 2;
+      background-color: #c4d8d8;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 20px 20px 0px 20px;
+    }
+    .documents {
+      grid-column: 2 / 3;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 20px 20px 0px 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .table th, .table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    .received {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .logo {
+        justify-content: center;
+        text-align: center;
+      }
+      .top-info, .greeting, .requirements, .recommendations, .documents {
+        grid-column: 1 / -1;
+      }
+      .requirements {
+        flex-direction: column;
+        gap: 10px;
+        transform: rotate(5rem);
+      }
+      .requirement-item {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      .requirements {
+        padding: 10px;
+      }
+      .table th, .table td {
+        font-size: 12px;
+        padding: 5px;
+      }
+      .logo h1 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/Images/Logo.jpg" alt="Lendrive Finance Logo" width="200" height="100">
+      <h1></h1>
+    </div>
+
+    <!-- Top Info Section -->
+    <div class="top-info">
+      <p><strong>Your Car Loan Quotes</strong></p>
+      <p>rahul@lendrive.com.au | Wed, 18 Dec 2024 7:27:01 PM | 3 minute(s) read</p>
+    </div>
+
+    <!-- Greeting & Message -->
+    <div class="greeting">
+      <p><strong>Dear [Customer's Name],</strong></p>
+      <p>Thank you for considering us for your car financing needs. Below, we’ve outlined your specific requirements and the best financing options we’ve selected for you.</p>
+    </div>
+
+    <!-- Requirements -->
+    <div class="requirements">
+      <div class="requirement-item">
+        <p><strong>Vehicle Condition</strong></p>
+        <p>New/Demo</p>
+      </div>
+      <div class="requirement-item">
+        <p><strong>Vehicle Supplier</strong></p>
+        <p>Dealer Sale/Private Sale</p>
+      </div>
+      <div class="requirement-item">
+        <p><strong>Car Amount</strong></p>
+        <p>$25,000.00</p>
+      </div>
+      <div class="requirement-item">
+        <p><strong>Deposit Amount</strong></p>
+        <p>$5,000.00</p>
+      </div>
+      <div class="requirement-item">
+        <p><strong>Balloon</strong></p>
+        <p>0%</p>
+      </div>
+    </div>
+
+    <!-- Top Two Recommendations -->
+    <div class="recommendations">
+      <p><strong>Top Two Recommendations</strong></p>
+      <table class="table">
+        <tr>
+          <th>Feature</th>
+          <th>Option 1: Lowest Monthly Repayment</th>
+          <th>Option 2: Lowest Monthly Repayment (No Early Exit Fee)</th>
+        </tr>
+        <tr>
+          <td>Eligibility/Status</td>
+          <td>Pre-Qualified ✅</td>
+          <td>Estimated</td>
+        </tr>
+        <tr>
+          <td>Lender Name</td>
+          <td>Wisr</td>
+          <td>Autopay</td>
+        </tr>
+        <tr>
+          <td>Interest Rate</td>
+          <td>8.58%</td>
+          <td>8.58%</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Documents Required -->
+    <div class="documents">
+      <p><strong>Documents Required</strong></p>
+      <ul>
+        <li>Your preferred lender and loan</li>
+        <li>2 of your partner’s most recent payslips</li>
+        <li class="received">Received: Front and back of your driver’s license</li>
+        <li class="received">Received: Front of your Medicare Card</li>
+        <li class="received">Received: 2 of your most recent payslips</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
